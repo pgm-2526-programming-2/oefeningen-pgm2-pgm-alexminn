@@ -115,7 +115,7 @@ const numbersWithoutEight = doubleNumbers.filter((value) => {
 
 console.log(numbersWithoutEight)
 
-numbers.some(() => {
+/*numbers.some(() => {
     return number == 8;
 })
 
@@ -123,7 +123,7 @@ numbers.some((number) => number === 8);
 
 numbers.every(() => {
     return number == 8;
-})
+})*/
 
 // Reduce -> Minder maken
 // Van een array naar 1 getal te gaan (meestal een som/optelling)
@@ -143,6 +143,23 @@ const products = [
     {name: "Shoes", price: 20},
     {name: "Hat", price: 20},
 ];
+
+/*products.price.reduce((prevValue, currentValue) => {
+    return prevValue + currentValue;
+})*/
+
+const totalSales = products.reduce((prevValue, currentValue) => {
+    if(typeof prevValue === "object"){
+        return prevValue.price + currentValue.price;
+    }   
+    return prevValue + currentValue.price;
+});
+
+console.log(totalSales);
+
+
+
+
 
 
 
