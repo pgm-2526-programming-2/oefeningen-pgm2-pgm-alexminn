@@ -1,3 +1,4 @@
+//Overzichtelijkheid
 function line(){
     console.log("--------------------------------------------------");  
 };
